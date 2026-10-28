@@ -1,6 +1,5 @@
 <#
-Create a dedicated Windows/Python 3.11 environment with the verified legacy
-OpenMMLab stack. No global package installation or automatic version migration.
+Create a Windows/Python 3.11 environment for SRD.
 Examples:
   .\scripts\setup_environment.ps1 -Python 'C:\Python311\python.exe'
   .\scripts\setup_environment.ps1 -Python '.\.venv-srd\Scripts\python.exe' -CheckOnly
@@ -96,5 +95,4 @@ if len(devices) == 1:
 '@
 $probeMode = if ($SkipCudaProbe) { 'skip-cuda' } else { 'run-cuda' }
 Invoke-CheckedPython -Executable $targetPython -Arguments @('-c', $runtimeCheck, $probeMode)
-Write-Host 'The environment check completed. It does not certify model training, dataset accuracy, or the final notebook.'
 Write-Host "Notebook launcher: & '$targetPython' -m jupyterlab"

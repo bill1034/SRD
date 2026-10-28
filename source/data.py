@@ -1,7 +1,6 @@
 """Audited 2-D OBB input, exact isotropic preprocessing and rotated evaluation.
 
 Coordinates are image coordinates: x right, y down, angles clockwise in radians.
-Every tunable option is read from cfg so it can be exposed in notebook cell two.
 """
 import csv
 import hashlib

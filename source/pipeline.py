@@ -98,7 +98,6 @@ def setup_seed(cfg):
     torch.cuda.manual_seed_all(cfg['seed']); torch.set_num_threads(cfg['num_threads'])
     torch.backends.cudnn.benchmark=not cfg['deterministic']
     torch.backends.cudnn.deterministic=cfg['deterministic']
-    # Custom CUDA operators can remain nondeterministic; this is recorded, not hidden.
 
 
 def file_sha256(path):
@@ -271,7 +270,6 @@ def train_stage(model,stage,train_records,val_records,classes,cfg,signature,bank
     if resume:
         first=resume['epoch']; best=resume['best_metric']; bad=resume['bad_epochs']; history=resume['history']
         optimizer.load_state_dict(resume['optimizer']); restore_rng(resume['rng'])
-        # Relocated resumes require a copied best checkpoint, preserving model selection.
         if first and not best_path.is_file():
             raise FileNotFoundError(f'Resume needs the corresponding best checkpoint beside last: {best_path}')
         if first:
@@ -337,7 +335,7 @@ def run_model(user_cfg):
     started=time.perf_counter(); torch.cuda.reset_peak_memory_stats()
     environment=dict(python=platform.python_version(),torch=str(torch.__version__),cuda=torch.version.cuda,
                      device=torch.cuda.get_device_name(torch.device(cfg['device'])),mmcv=mmcv.__version__,mmdet=mmdet.__version__,mmrotate=mmrotate.__version__,
-                     determinism='seeded; custom CUDA kernels may remain nondeterministic',performance_claim='No baseline superiority follows from engineering verification')
+                     determinism='seeded; custom CUDA kernels may remain nondeterministic')
     mode=cfg['mode']; checkpoint=cfg['checkpoint_path']
     if mode in ('infer','evaluate'):
         if not checkpoint: raise ValueError('Set checkpoint_path to your trained SRD checkpoint')
@@ -413,7 +411,6 @@ def run_model(user_cfg):
         del model
         torch.cuda.empty_cache()
         model,b_payload=load_checkpoint(b_path,cfg['device'])
-        # Deployment is the validation-selected full Stage-B model, not an ensemble.
         predictions,logs,timing=predict_records(model,val_records,cfg)
         val_metrics=evaluate_obbs(predictions,val_records,len(classes),cfg)
         save_predictions(predictions,val_records,classes,output/'validation',cfg)

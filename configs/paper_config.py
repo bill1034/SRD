@@ -17,10 +17,7 @@ CFG["reasoning"]["spectral_enabled"] = True
 CFG["reasoning"]["memory_enabled"] = True
 CFG["reasoning"]["mrf_enabled"] = True
 
-# The paper reports the three SRD modules. The optional legacy quality head is
-# retained for checkpoint compatibility but is not part of the paper model.
 CFG["reasoning"]["quality"]["enabled"] = False
 
-# Set these locally before training or evaluation.
 CFG["manifest_path"] = str(ROOT / "configs" / "manifest.example.json")
 CFG["output_dir"] = str(ROOT / "srd_results")

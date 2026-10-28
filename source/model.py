@@ -1,7 +1,6 @@
 """SRD extensions over the OpenMMLab ReDet implementation.
 
 OpenMMLab components are Apache-2.0, Copyright (c) OpenMMLab.
-No user baseline checkpoints or original FAA implementation are bundled.
 """
 import copy
 import hashlib
