@@ -1,0 +1,10 @@
+Spectral Reference Detector (SRD)
+Copyright 2026 SRD contributors.
+
+This project builds on OpenMMLab MMDetection and MMRotate components,
+including ReDet and RoI Transformer interfaces. OpenMMLab components are
+licensed under the Apache License 2.0 and retain their original notices.
+
+The repository does not redistribute medical datasets, trained checkpoints,
+or third-party pretrained weights. Users must obtain these resources under
+their original licenses and terms.

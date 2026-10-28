@@ -1,0 +1,23 @@
+{
+  "classes": ["finding"],
+  "records": [
+    {
+      "id": "case001-image01",
+      "image": "../data/images/image01.png",
+      "split": "train",
+      "group_id": "case001",
+      "boxes": [[150.0, 100.0, 60.0, 20.0, 0.3]],
+      "labels": ["finding"],
+      "reviewed": true
+    },
+    {
+      "id": "case002-image01",
+      "image": "../data/images/image02.png",
+      "split": "val",
+      "group_id": "case002",
+      "boxes": [[80.0, 70.0, 30.0, 12.0, -0.4]],
+      "labels": [0],
+      "reviewed": true
+    }
+  ]
+}

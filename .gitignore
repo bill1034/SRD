@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and editors
+.venv*/
+venv/
+.idea/
+.vscode/
+
+# Data, checkpoints, and generated outputs
+data/
+datasets/
+checkpoints/
+outputs/
+runs/
+srd_results/
+inference_results/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Local configuration and notebook state
+configs/local_*
+*.local.json
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+# Verified target: Windows x64, CPython 3.11, PyTorch 2.1.1 / CUDA 11.8.
+# Install torch/torchvision from the cu118 index first using setup_environment.ps1.
+torch==2.1.1
+torchvision==0.16.1
+numpy==1.26.4
+scipy==1.11.4
+sympy==1.11.1
+Pillow==12.0.0
+opencv-python==4.11.0.86
+matplotlib==3.8.2
+PyYAML==6.0.1
+packaging==24.2
+requests==2.31.0
+six==1.16.0
+tqdm==4.66.5
+platformdirs==3.10.0
+importlib-metadata==8.7.0
+colorama==0.4.6
+addict==2.4.0
+yapf==0.40.1
+terminaltables==3.1.10
+pycocotools==2.0.10
+e2cnn==0.2.3
+mmdet==2.28.2
+mmrotate==0.3.4
+mmcv-full @ https://download.openmmlab.com/mmcv/dist/cu118/torch2.1.0/mmcv_full-1.7.2-cp311-cp311-win_amd64.whl#sha256=0ee94befde768f03c6707231b0a128ff67b8175bb86afae72ee0a70e80608367
+# Notebook runtime and local behavioral tests.
+nbformat==5.9.2
+nbclient==0.8.0
+ipykernel==6.25.0
+jupyterlab==3.6.3
+pytest==8.3.5
+pluggy==1.5.0
+iniconfig==2.0.0
+tomli==2.2.1

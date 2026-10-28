@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use SRD, please cite the software release. Paper citation metadata will be added after publication."
+title: "SRD: A Reference-Grounded Perception Tool for Agentic Medical Image Inspection"
+type: software
+version: 0.1.0
+date-released: 2026-10-29
+authors:
+  - family-names: Yuan
+    given-names: Jiachen
+    orcid: "https://orcid.org/0009-0000-8763-0440"
+  - family-names: Shi
+    given-names: Yanqin
+    orcid: "https://orcid.org/0009-0005-5429-2496"
+  - family-names: Cai
+    given-names: Anteng
+    orcid: "https://orcid.org/0009-0003-0403-761X"
+  - family-names: Ye
+    given-names: Zihan
+    orcid: "https://orcid.org/0009-0008-1959-508X"
+  - family-names: An
+    given-names: Junshu
+    orcid: "https://orcid.org/0009-0002-8529-285X"
+  - family-names: Xin
+    given-names: Ning
+    orcid: "https://orcid.org/0009-0003-7718-6552"
+  - family-names: Zhao
+    given-names: Lingxiao
+license: Apache-2.0
+keywords:
+  - oriented object detection
+  - medical image analysis
+  - spectral adaptation
+  - Bayesian reference memory
+  - evidence refinement
