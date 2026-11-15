@@ -99,10 +99,6 @@ Datasets and trained checkpoints are not included.
 }
 ```
 
-## Acknowledgements
-
-SRD builds on [MMDetection](https://github.com/open-mmlab/mmdetection), [MMRotate](https://github.com/open-mmlab/mmrotate), [ReDet](https://arxiv.org/abs/2103.07733), and [RoI Transformer](https://arxiv.org/abs/1812.00155).
-
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
